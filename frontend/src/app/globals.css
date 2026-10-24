@@ -1,0 +1,88 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Light Theme (Clean Blue Pastel & Crisp Slate Navy) */
+    --background: 214 32% 98%;
+    --foreground: 222 47% 11%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 11%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 47% 11%;
+
+    --primary: 221 83% 53%; /* Crisp Navy Blue */
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 214 32% 92%; /* Pastel Blue Tint */
+    --secondary-foreground: 222 47% 15%;
+
+    --muted: 214 32% 93%;
+    --muted-foreground: 215 16% 47%;
+
+    --accent: 213 94% 93%; /* Pastel Sky Blue */
+    --accent-foreground: 222 47% 15%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214 28% 88%;
+    --input: 214 28% 88%;
+    --ring: 221 83% 53%;
+
+    --radius: 0.65rem;
+  }
+
+  .dark {
+    /* Dark Theme (Midnight Navy & Pastel Blue Glow) */
+    --background: 222 47% 7%; /* Deep Navy */
+    --foreground: 213 31% 96%;
+
+    --card: 222 44% 11%; /* Navy Card */
+    --card-foreground: 213 31% 96%;
+
+    --popover: 222 44% 11%;
+    --popover-foreground: 213 31% 96%;
+
+    --primary: 217 91% 60%; /* Soft Electric Blue Pastel */
+    --primary-foreground: 222 47% 10%;
+
+    --secondary: 217 33% 17%; /* Dark Slate Navy */
+    --secondary-foreground: 213 31% 96%;
+
+    --muted: 217 33% 16%;
+    --muted-foreground: 215 20% 65%;
+
+    --accent: 221 39% 20%;
+    --accent-foreground: 213 31% 96%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217 33% 18%;
+    --input: 217 33% 18%;
+    --ring: 217 91% 60%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+/* Custom Utilities for Navy / Blue Pastel styling */
+.navy-gradient {
+  background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 50%, #38bdf8 100%);
+}
+
+.navy-card-glow {
+  box-shadow: 0 10px 25px -5px rgba(37, 99, 235, 0.08), 0 8px 10px -6px rgba(37, 99, 235, 0.04);
+}
